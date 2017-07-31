@@ -1,0 +1,13 @@
+{% extends "Errors/main.html" %}
+{% block title %} Internal Server Error {% endblock title %}
+{% block content %}    
+<div class="row">
+	<div class="col-md-10 col-sm-12">
+		<h1 class="alert alert-danger"><b>Uncaught exception:</b> {{ class }}</h1>
+		<h5><b>File:</b> {{ file }}</h5>
+		<h5><b>Line:</b> {{ line }}</h5>
+		<h5><b>Message:</b> {{ msg }}</h5>
+		<h5><b>Trace:</b><pre>{{ trace }}</pre></h3>
+	</div>
+</div>
+{% endblock %}
